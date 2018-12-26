@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\iflanguage{russian}{\hbox
+  to.8em{--\hss--}}{\textemdash}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em plus
+  0.1em\fi
+\cyrdash\hskip.2em plus 0.1em\ignorespaces}
+\renewcommand{\newblock}{\ignorespaces}
+
+\bibitem{Pup09}
+\selectlanguageifdefined{russian}
+\BibEmph{Пупкин~Василий, Эйнштейн~А.} \LaTeX для
+  <<чайников>>. \BibDash
+\newblock М., 2009. \BibDash
+\newblock 299~{с.}
+
+\bibitem{wiki:latex}
+\selectlanguageifdefined{russian}
+\BibEmph{Wikipedia}. Типографика "--- Википедия. \BibDash
+\newblock 2012. \BibDash
+\newblock {Режим доступа}:
+  \BibUrl{https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BF%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B0}
+  ({дата обращения}: 25.01.2012).
+
+\end{thebibliography}

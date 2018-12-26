@@ -1,0 +1,72 @@
+
+
+\newlength{\savedparskip}
+
+\renewenvironment*{titlepage}{
+
+
+
+    \IfFileExists{mvdlogo.png}{      % logo for first page (no compatible with GOST)
+        \begin{center}
+            \parbox[t]{.3\linewidth}{
+                \vspace{-5ex}\center{\includegraphics[width=.99\linewidth]{mvdlogo}}\\
+            }
+			
+
+        \end{center}
+        }
+
+
+    \begin{centering}
+		\begin{spacing}{1.0}
+\noindent{{\Nir@OrgLongName}}  % name of Institute
+\end{spacing}
+
+        \vspace{3ex}
+		\vspace{3ex}
+		
+		\begin{spacing}{1.0}
+		\Nir@KafedraName
+		\end{spacing}
+
+		\vspace{3ex}
+		 \vspace{2ex}
+		 
+		 \begin{spacing}{1.0}
+		\MakeUppercase{\Nir@Kursach}\\
+        \Nir@PoDis\\
+		\Nir@Dis
+        \vfill
+		%\Nir@TitleAndSubject          % Report Subject
+		\textbf{\Nir@Tema\\}
+		\end{spacing}
+		
+		\vspace{2ex}
+
+		%таблица
+\begin{table}[]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+Курсовую работу выполнил:   & \begin{tabular}[c]{@{}l@{}}слушатель 504 учебного взвода\\ 5 курса Факультета подготовки специалистов\\ в области информационной безопасности \\ \\ Иванов Иван Иванович \end{tabular} \\ \hline
+\begin{tabular}[t]{@{}l@{}}Научный руководитель курсовой\\ работы:\end{tabular}                                         & \begin{tabular}[c]{@{}l@{}}доцент кафедры специальных информационных технологий\\ учебно-научного комплекса информационных технологий,\\ кандидат технических наук, старший лейтенант полиции\\ Захаров Дмитрий Никанорович\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Работа защищена на оценку\\ \\ \\ \hline \\ \end{tabular} & \begin{tabular}[c]{@{}l@{}}Научный руководитель курсовой работы\\ \\ \\ \hline \\ <<\noindent\rule{1cm}{0.4pt}>> \noindent\rule{4cm}{0.4pt} 20\noindent\rule{0.5cm}{0.4pt} г.\end{tabular}                     \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+		
+        \vfill
+
+        \vfill
+
+        \Nir@Town~\Nir@Year
+
+    \end{centering}
+    \linespread{\Gost@LineSpread}\normalsize
+    \setlength{\parskip}{\savedparskip}
+}
+
+
+
